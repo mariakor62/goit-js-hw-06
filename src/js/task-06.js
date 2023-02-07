@@ -1,16 +1,16 @@
 const textInput = document.querySelector('#validation-input');
-const dataInput = document.querySelector('[data-length="6"]');
-const datasetLength = dataInput.dataset.length;
-
+const maxLength = 6;
 textInput.addEventListener('blur', onInputBlur)
-
 function onInputBlur() {
-    if (textInput.value.length == datasetLength) {
+    if (textInput.value.length === maxLength) {
         textInput.classList.remove('invalid')
         textInput.classList.add('valid')
     } else {
         textInput.classList.remove('valid')
         textInput.classList.add('invalid')
     }
-} inputClear.addEventListener('blur', onInputBlur);
+}
+// inputClear.addEventListener('blur', onInputBlur);
+
+
 
